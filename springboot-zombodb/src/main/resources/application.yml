@@ -1,6 +1,4 @@
 spring:
-  jackson:
-    date-format: yyyy-MM-dd HH:mm:ss
   datasource:
     url: jdbc:postgresql://localhost:5432/postgres
     username: postgres
@@ -8,6 +6,8 @@ spring:
   flyway:
     locations: classpath:sql
     baseline-on-migrate: true
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
 logging:
   level:
     com.monkeydp.sample.springboot.zombodb: info

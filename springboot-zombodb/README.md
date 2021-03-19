@@ -16,11 +16,7 @@ SpringBoot + Jpa + Zombodb
 
 ### 2. 测试项目
 
-启动 `SpringbootZombodbApplication`
+启动项目
 
-访问 `http://localhost:8080/doc.html`
-
-左侧栏 → `产品` → `产品列表` → `调试`
-
-![](.README/test_zombodb.png)
+接口地址 http://localhost:8080/doc.html
 
