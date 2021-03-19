@@ -1,0 +1,28 @@
+spring:
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: postgres
+  flyway:
+    locations: classpath:sql
+    baseline-on-migrate: true
+logging:
+  level:
+    com.monkeydp.sample.springboot.zombodb: info
+    jdbc:
+      sqlonly: fatal
+      resultsettable: info
+      sqltiming: info
+      audit: fatal
+      resultset: fatal
+      connection: fatal
+log4jdbc:
+  dump:
+    sql:
+      addsemicolon: true
+      maxlinelength: 0
+  trim:
+    sql:
+      extrablanklines: false
