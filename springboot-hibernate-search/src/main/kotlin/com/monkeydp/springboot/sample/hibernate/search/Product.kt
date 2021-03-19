@@ -44,6 +44,7 @@ class ProductController(
     fun list(form: ListForm) =
             Search.session(entityManager).search(Product::class.java)
                     .where {
+                        if (form.name == null) return@where it.matchAll()
                         it.match()
                                 .fields("name")
                                 .matching(form.name)
@@ -51,7 +52,7 @@ class ProductController(
                     .fetchAll()
                     .hits() as List<Product>
 
-    class ListForm(val name: String)
+    class ListForm(val name: String? = null)
 
     @ApiOperation("产品创建")
     @PostMapping
