@@ -4,6 +4,8 @@ SpringBoot + Hibernate Search
 
 前置步骤参考 [Elastic stack (ELK) on Docker 中文版](https://github.com/monkeydp/docker-elk)
 
+[Hibernate Search 文档](https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#getting-started-initialization)
+
 ## 教程
 
 启动项目
